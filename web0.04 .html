@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf=8">
+        <meta name="keywords"content="coffee meeting">
+        <title>coffee meeting</title>
+        <style>
+            *{
+                padding: 0px;
+                margin: 0px;
+            }
+            body{
+                background-color: white;
+                color: #000;
+            }
+
+            @keyframes left {
+                0%{
+                    opacity: 1;
+                    transform: translateX(800px);
+                }
+                90%{
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                95%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+            @keyframes bottom {
+                0%{
+                    opacity: 1;
+                    transform: translateY(-600px);
+                }
+                90%{
+                    opacity: 0;
+                    transform: translateY(200px);
+                }
+                100%{
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+        <style>
+            .header{
+                height: 205vh;
+            }
+
+            .header-logo{
+                height: 100px;
+                width: 200px;
+                position: absolute;
+                top:10%;
+                left: 5%;
+                background-image: url(logo.jpg);
+                background-size: cover;
+                border-radius: 25px;
+
+                animation-name: bottom;
+                animation-duration: 2s;
+            }
+            .header-box{
+                height: 95vh;
+                background-image:linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.325)
+                ,rgba(0, 0, 0, 0.419)
+                ,rgba(0, 0, 0, 0.851)
+                ,black)
+                ,url(coffee1.jpg);
+                background-size:contain;
+
+                position: relative;
+            }
+            .header-box-text{
+                position: absolute;
+                top: 30%;
+                margin-left: 5%;
+
+                animation-name: left;
+                animation-duration: 2s;
+            }
+            .header-box-text h1{
+                color: white;
+                text-transform: uppercase;
+                font-size: 75px;
+            }
+            .header-box-text p{
+                color: white;
+                text-transform: uppercase;
+                font-size: 30px;
+            }
+            .header-box-img{
+                float: right;
+                margin: 100px;
+                height: 60%;
+                width: 30%;
+                background-color: rgba(0, 0, 0, 0);
+                background-image: url(code.svg);
+                background-size:cover;
+            }
+            .header-main{
+                width: 100%;
+                height: 150vh;
+                background-color:black;
+                padding: 30px;
+            }
+            .header-main h1{
+                font-size: 50px;
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+
+                animation-name: bottom;
+                animation-duration: 1.5s;
+            }
+            .header-main-p{
+                width: 80%;
+                margin-left: 100px;
+                font-size: 30px;
+                text-align: center;
+                color: white;
+                text-transform: uppercase;
+
+                animation-name: bottom;
+                animation-duration: 1.5s;
+            }
+        </style>
+        <style>
+            .section{
+                height: 200Vh;
+                width: 100%;
+                background-color: rgb(0, 0, 0);
+            }
+            .section-box{
+                margin-top: 3%;
+                height: 30%;
+                width: 100%;
+                background-color: rgb(41, 41, 41);
+            }
+
+
+            .section-box h1{
+                font-size: 50px;
+                text-align: center;
+                text-transform: uppercase;
+                color: white;
+            }
+            .section-box p{
+                font-size: 25px;
+                color: white;
+                margin-left: 15px;
+            }
+            .section-box-text{
+                margin: 10%;            
+                text-align: center;
+                border-radius: 5px;
+
+                transition: all 2s;
+            }
+            .section-box-text a{
+                font-size: 60px;
+                text-decoration: none;
+                color: white;
+                transition: all 2s;
+            }
+            .section-box-text a:hover{
+                background-color: rgb(255, 255, 255);
+                color: #000;
+                border-radius: 25px;
+                box-shadow: 0 0 1px white
+                , 0 0 5px white
+                , 0 0 10px white
+                , 0 0 50px white;
+            }
+
+
+            .section-box-left{
+                width: 40%;
+                height: 100%;
+                background-color: rgb(0, 0, 0);
+                float: left;
+            }
+            .section-box-left-2{
+                width: 60%;
+                height: 100%;
+                background-image: linear-gradient(to right
+                ,black
+                ,rgba(255, 255, 255, 0.151))
+                ,url(game2.jpg);
+                background-size: cover;
+                float: right;
+            }
+            .section-box-right{
+                width: 40%;
+                height: 100%;
+                background-color: rgb(0, 0, 0);
+                float: right;
+            }
+            .section-box-right-2{
+                width: 60%;
+                height: 100%;
+                background-image: linear-gradient(to left
+                ,black
+                ,rgba(255, 255, 255, 0.151))
+                ,url(code.jpg);
+                background-size: cover;
+                float: left;
+                position: relative;
+            }
+            .section-box-left-3{
+                width: 60%;
+                height: 100%;
+                background-image: linear-gradient(to right
+                ,black
+                ,rgba(255, 255, 255, 0.151))
+                ,url(music.jpg);
+                background-size: cover;
+                float: right;
+            }
+        </style>
+        <style>
+            .end{
+                height: 80vh;
+                background-color: rgb(0, 0, 0);
+                padding-left: 40px;
+                display: flex;
+            }
+            .end-box1{
+                width: 50%;
+                height: 90%;
+                padding: 20px;
+                background-color: #000;
+            }
+            .end-box2{
+                width: 40%;
+                height: 90%;
+                padding: 20px;
+                background-color: #000;
+            }
+            .end h1{
+                font-size: 70px;
+                text-align: center;
+                color: white;
+            }
+            .end p{
+                margin-left: 50px;
+                font-size: 25px;
+                color: white;
+            }
+            .bottom{
+                width:100%;
+                height: 50vh;
+                background-color: #000;
+            }
+            .bottom h1{
+                text-align: center;
+                font-size: 75px;
+                color: white;
+            }
+            .bottom p{
+                font-size: 35px;
+                text-align: center;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-box">
+                <div class="header-logo"></div>
+                <div class="header-box-text">
+                    <h1>coffee<br> meeting</h1>
+                    <p>Challenge is our proof,<br> 
+                        and denial is our motivation!</p>
+                </div>
+                <div class="header-box-img">
+                </div>
+            </div>
+            <div class="header-main">
+                <h1>关于coffee meeting 工作室</h1><br><br>
+                <div class="header-main-p">
+                    <p>为什么工作室叫这个名字:</p><br>
+                    <p>coffee meeting工作室的名字由来，
+                        仅仅是因为我们经常会在一个大商场的一个咖啡店里讨论事情，
+                        所以日后便都习惯来这个咖啡店。以至于现在工作室有重大的会议，
+                        我们都是在这个咖啡店讨论，久而久之在团队领导者忙于课程之际，
+                        我（团队网站开发者）便直接将工作室更名为“coffee meeting”
+                        （因此他想诟病已经来不及了，哈哈）
+                    </p><br><br>
+                    <p>coffee meeting工作室简介:</p><br>
+                    <p>本团队由六名学生组成。
+                        每个人都胸怀大志，
+                        因为爱好聚在一起，各个团队成员分别为：
+                        ，“铜雀门声”，“sunset-梧桐”
+                        “伊莱克斯•吹米特斯”、“全能打工人”、
+                        “littry01a”、“妩媚的猫”
+                        我们将在课余时间进行创作，
+                        创作作品会第一时间发布在官方网站上，
+                        感谢支持。(*^_^*)
+                    </p>
+                </div>
+            </div>
+        </header>
+        <div class="section">
+            <div class="section-box">
+                <div class="section-box-left">
+                    <h1>Game development</h1><br>
+                    <p>
+                        工作室的首要任务：
+                        游戏开发。但目前工作室人员较少并且大多数人员身兼多职，
+                        所以开发进度教缓，还请敬请期待
+                    </p>
+                    <div class="section-box-text">
+                        <a href="work.html" target="_blank">开发进度</a>
+                    </div>
+                </div>
+                <div class="section-box-left-2"></div>
+            </div>
+            <div class="section-box">
+                <div class="section-box-right">
+                    <h1>Develop website</h1><br>
+                    <p> 工作室的第二任务：专门的网站搭建。
+                        虽然整个工作室只有一个人（团队网
+                        站开发者）搭建网站，但因为团队只
+                        有4人，所以开发网站的人占比25%。
+                        故开发网站也是本工作室的任务之一
+                    </p>
+                    <div class="section-box-text">
+                        <a href="work.html" target="_blank">开发进度</a>
+                    </div>
+                </div>
+                <div class="section-box-right-2"></div>
+            </div>
+            <div class="section-box">
+                <div class="section-box-left">
+                    <h1>write music</h1><br>
+                    <p>
+                        工作室的不算任务的任务：
+                        编写音乐。在长路漫漫的团队生涯中，
+                        音乐永远是我们最好的朋友，我们会
+                        把在开发中的灵感以独特的方式献给
+                        各位支持者，还请敬请期待。
+                    </p>
+                    <div class="section-box-text">
+                        <a href="work.html" target="_blank">开发进度</a>
+                    </div>
+                </div>
+                <div class="section-box-left-3"></div>
+            </div>
+        </div>
+        <div class="end">
+            <div class="end-box1">
+                <h1>下一步</h1><br>
+                <p>
+                    在开发完官方网站后，
+                    我们将进行我们内部
+                    一些简便的快速的代
+                    码开源，开源的代码
+                    会放Github上，并且
+                    我们会把重心放在游
+                    戏开发上，在其他项
+                    目上的投入会相对较
+                    少，并且我们会着手
+                    一些coffee meeting
+                    工作室内部的工作软
+                    件的开发。具体信息
+                    我们都会第一时间发
+                    布在官方网站和国内
+                    各大视频平台，主要
+                    会发布在bilbil上。
+                    还请敬请期待，感谢
+                    各位的支持
+                </p><br><br><br>
+                <p>----------网站作者：伊莱克斯•吹米特斯</p>
+            </div>
+            <div class="end-box2">
+                <h1>在此</h1><br>
+                <p>感谢各位团队成员和各大素材网站，bilbil的帮助</p>
+            </div>
+        </div>
+        <div class="bottom">
+            <h1>联系我们</h1><br><br>
+            <p>本网站开发者邮箱：wdw1949226939@163.com</p><br>
+            <p>官方邮箱：wdw1949226939@163.com</p><br>
+            <p>官方QQ交流群：暂无</p>
+            <p></p>
+        </div>
+    </body>
+</html>
